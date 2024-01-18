@@ -1,11 +1,8 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const server = require('http').Server(app)
+const io = require('socket.io')(server)
 
-app.get('/', (req,res) =>{
-    res.send('Working...');
-})
-
-app.listen(port,()=>{
-    console.log(`server is connected - http://localhost/${port}`)
+app.listen(3000, () =>{
+    console.log(`Server connected!`)
 })
