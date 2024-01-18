@@ -3,6 +3,6 @@ const app = express()
 const server = require('http').Server(app)
 const io = require('socket.io')(server)
 
-app.listen(3000, () =>{
+server.listen(3000, () =>{
     console.log(`Server connected!`)
 })
